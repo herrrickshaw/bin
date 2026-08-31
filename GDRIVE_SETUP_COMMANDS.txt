@@ -1,0 +1,107 @@
+================================================================================
+GOOGLE DRIVE OAUTH SETUP - QUICK REFERENCE
+================================================================================
+
+STEP 1: Go to Google Cloud Console
+URL: https://console.cloud.google.com/
+
+STEP 2: Create Project Named "rclone-gdrive-backup"
+- Click Project Selector (top-left)
+- Click "NEW PROJECT"
+- Name: rclone-gdrive-backup
+- Click CREATE
+- Wait for project to load
+
+STEP 3: Enable Google Drive API
+- Search bar: type "google drive api"
+- Click "Google Drive API"
+- Click ENABLE button
+- Wait 30 seconds
+
+STEP 4: Create OAuth Credentials
+- If prompted, configure OAuth Consent Screen:
+  * Select "External"
+  * App name: rclone-backup
+  * Add scopes: Google Drive API
+  * Add test user: umashankartd1991@gmail.com
+- Click Credentials (left menu)
+- Click "Create Credentials"
+- Select "OAuth client ID"
+- Application type: "Desktop application"
+- Name: rclone-backup
+- Click CREATE
+
+STEP 5: Copy Your Credentials
+- A popup shows:
+  * Client ID (copy this)
+  * Client Secret (copy this)
+- KEEP THESE SAFE - Don't share!
+
+STEP 6: Terminal Commands (Copy & Paste)
+
+# FIRST: Remove old config
+rclone config delete googledrive
+
+# SECOND: Create new config with YOUR credentials
+# Replace the values in ALL CAPS below with your actual credentials from Step 5
+
+rclone config create googledrive drive \
+  --client-id="PASTE_YOUR_CLIENT_ID_HERE" \
+  --client-secret="PASTE_YOUR_CLIENT_SECRET_HERE" \
+  --scope=drive \
+  --interactive=false
+
+# Example (with fake credentials - replace with yours):
+# rclone config create googledrive drive \
+#   --client-id="123456789-abc123xyz.apps.googleusercontent.com" \
+#   --client-secret="GOCSPX-abc123xyz" \
+#   --scope=drive \
+#   --interactive=false
+
+STEP 7: Authenticate
+rclone authorize drive
+
+- Browser opens automatically
+- Click your Google account
+- Click "Continue" on all permission prompts
+- Wait for "Success! All done."
+- Come back to terminal
+
+STEP 8: Test
+rclone ls googledrive:/
+
+# Should show your Google Drive files
+
+STEP 9: Done!
+Your backups now use your own credentials and will work indefinitely.
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+If you get "OAuth client ID not found":
+  - Check for extra spaces in Client ID/Secret
+  - Try: rclone config delete googledrive (then redo STEP 6)
+
+If authentication fails:
+  - Run: rclone authorize drive
+  - Choose your account again
+
+If you need to reconfigure:
+  - Run: rclone config
+  - Select "e) Edit existing remote"
+  - Choose "googledrive"
+  - Update Client ID/Secret
+
+================================================================================
+BACKUP SCRIPTS NOW USE YOUR NEW CREDENTIALS
+================================================================================
+
+Run your backup scripts - they'll automatically use the new OAuth credentials:
+
+  ~/bin/backup_downloads.sh
+  ~/bin/align_cloud_backups.sh
+
+No changes needed!
+
+================================================================================
