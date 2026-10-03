@@ -1,0 +1,78 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "align_cloud_backups",
+      "label": "align_cloud_backups.sh",
+      "file_type": "code",
+      "source_file": "align_cloud_backups.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "align_cloud_backups_sh__entry",
+      "label": "align_cloud_backups.sh script",
+      "file_type": "code",
+      "source_file": "align_cloud_backups.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "backup_downloads",
+      "label": "backup_downloads.sh",
+      "file_type": "code",
+      "source_file": "backup_downloads.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "backup_downloads_sh__entry",
+      "label": "backup_downloads.sh script",
+      "file_type": "code",
+      "source_file": "backup_downloads.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "align_cloud_backups",
+      "target": "align_cloud_backups_sh__entry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "align_cloud_backups.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backup_downloads",
+      "target": "backup_downloads_sh__entry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backup_downloads.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}
