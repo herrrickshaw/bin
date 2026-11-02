@@ -2,7 +2,7 @@
 # Daily Downloads backup to Dropbox and Google Drive
 # Syncs all files from ~/Downloads to remote storage
 
-set -e
+set -eu
 
 LOG_FILE="$HOME/.local/var/log/downloads_backup.log"
 mkdir -p "$(dirname "$LOG_FILE")"
