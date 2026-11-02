@@ -2,7 +2,7 @@
 # Align files between Google Drive and Dropbox
 # Ensures both cloud providers have identical content
 
-set -e
+set -eu
 
 LOG_FILE="$HOME/.local/var/log/cloud_alignment.log"
 mkdir -p "$(dirname "$LOG_FILE")"
