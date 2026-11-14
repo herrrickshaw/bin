@@ -1,0 +1,14 @@
+#!/bin/bash
+# Run a Claude Code CLI session against the local FreeLLMAPI router (free-tier models)
+# instead of the Anthropic quota. Credentials are injected for this process only;
+# ~/.claude/settings.json is never modified, so Desktop/Code-tab sessions are unaffected.
+#   claude-free                  # router picks the best available free model
+#   claude-free --model gemini-3.6-flash
+set -euo pipefail
+export PATH=/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH
+set -a; source "$HOME/.config/market-secrets/credentials.env"; set +a
+if ! curl -sf "$FREELLMAPI_URL/livez" >/dev/null 2>&1; then
+  echo "freellmapi router is not running on $FREELLMAPI_URL — start it with: nohup bash ~/bin/freellmapi_start.sh >>~/Library/Logs/freellmapi/stdout.log 2>&1 &" >&2
+  exit 1
+fi
+exec node "$HOME/freellmapi/cli/dist/index.js" launch --url "$FREELLMAPI_URL" --api-key "$FREELLMAPI_API_KEY" "$@"

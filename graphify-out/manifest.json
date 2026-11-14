@@ -22,5 +22,77 @@
     "seen": 1789968629.514868,
     "ast_hash": "510f7e392c07f0574ba8a559ba2cdf12",
     "semantic_hash": ""
+  },
+  "add_source_fetch_section.py": {
+    "mtime": 1792912344.4511957,
+    "seen": 1792992630.606524,
+    "ast_hash": "38e31e7b904aec0f3b5fdfb50ac0ab41",
+    "semantic_hash": ""
+  },
+  "fetch_source.py": {
+    "mtime": 1792912446.909661,
+    "seen": 1792992630.606567,
+    "ast_hash": "e5aeccb5433e002b48c22701321118b7",
+    "semantic_hash": ""
+  },
+  "fetch_source.sh": {
+    "mtime": 1792912446.8312695,
+    "seen": 1792992630.60657,
+    "ast_hash": "b809a7069d6c44a56b03aea0ef04e58b",
+    "semantic_hash": ""
+  },
+  "HOW_TO_USE_WITH_AI.md": {
+    "mtime": 1792913997.740015,
+    "seen": 1792992630.60658,
+    "ast_hash": "fd148005346b1b7ce61682fb21d8550a",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1792913997.7402356,
+    "seen": 1792992630.606582,
+    "ast_hash": "80fcccca4babda194f3ffe9293e16a6e",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1792913997.7478473,
+    "seen": 1792992630.606585,
+    "ast_hash": "1c88ac97bd5c8579bc0a7bbccda3d562",
+    "semantic_hash": ""
+  },
+  "SOURCE_FETCH_TOOLKIT.md": {
+    "mtime": 1792986160.484434,
+    "seen": 1792992630.606587,
+    "ast_hash": "a47be450a5dba509a4d3872000a649ba",
+    "semantic_hash": ""
+  },
+  "source_fetch_section.md": {
+    "mtime": 1792912344.4233418,
+    "seen": 1792992630.60659,
+    "ast_hash": "df5567efd24df12d8c9089d33e9aa039",
+    "semantic_hash": ""
+  },
+  "claude-free": {
+    "mtime": 1793344020.2697594,
+    "seen": 1793597427.0289931,
+    "ast_hash": "3eb4388c81fd95573e44723bd48af549",
+    "semantic_hash": ""
+  },
+  "freellmapi_start.sh": {
+    "mtime": 1793343909.4667938,
+    "seen": 1793597427.029013,
+    "ast_hash": "62d6531a070fc2afc564bcdb165eb1e0",
+    "semantic_hash": ""
+  },
+  "vertistrat_status.sh": {
+    "mtime": 1793277993.831721,
+    "seen": 1793597427.029017,
+    "ast_hash": "63aaad8ea07c5110a2235ae9f1a342f1",
+    "semantic_hash": ""
+  },
+  "update_tools.sh": {
+    "mtime": 1794003617.5658154,
+    "seen": 1794004859.0693371,
+    "ast_hash": "cdec483066f220d1fe484afd867e511d",
+    "semantic_hash": ""
   }
 }
