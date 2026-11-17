@@ -23,7 +23,7 @@ STEP 4: Create OAuth Credentials
   * Select "External"
   * App name: rclone-backup
   * Add scopes: Google Drive API
-  * Add test user: umashankartd1991@gmail.com
+  * Add test user: you@example.com
 - Click Credentials (left menu)
 - Click "Create Credentials"
 - Select "OAuth client ID"
@@ -53,8 +53,8 @@ rclone config create googledrive drive \
 
 # Example (with fake credentials - replace with yours):
 # rclone config create googledrive drive \
-#   --client-id="123456789-abc123xyz.apps.googleusercontent.com" \
-#   --client-secret="GOCSPX-abc123xyz" \
+#   --client-id="<YOUR_CLIENT_ID>" \
+#   --client-secret="<YOUR_CLIENT_SECRET>" \
 #   --scope=drive \
 #   --interactive=false
 
